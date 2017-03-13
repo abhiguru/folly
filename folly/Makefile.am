@@ -591,7 +591,6 @@ libfolly_la_SOURCES += \
 endif
 
 libfollybasesse42_la_LDFLAGS = $(AM_LDFLAGS) -version-info $(LT_VERSION)
-libfollybasesse42_la_CXXFLAGS = -msse4.2
 
 libfollybase_la_LIBADD = libfollybasesse42.la
 libfollybase_la_LDFLAGS = $(AM_LDFLAGS) -version-info $(LT_VERSION)
