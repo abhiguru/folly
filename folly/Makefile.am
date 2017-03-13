@@ -14,7 +14,6 @@ generate_fingerprint_tables_SOURCES = build/GenerateFingerprintTables.cpp
 generate_fingerprint_tables_LDADD = libfollybase.la
 
 noinst_LTLIBRARIES = \
-	libfollybasesse42.la \
 	libfollybase.la
 
 lib_LTLIBRARIES = \
@@ -71,7 +70,6 @@ nobase_follyinclude_HEADERS = \
 	detail/MemoryIdler.h \
 	detail/MPMCPipelineDetail.h \
 	detail/RangeCommon.h \
-	detail/RangeSse42.h \
 	detail/Sleeper.h \
 	detail/SlowFingerprint.h \
 	detail/SocketFastOpen.h \
@@ -589,8 +587,6 @@ libfolly_la_SOURCES += \
 	fibers/Semaphore.cpp \
 	fibers/TimeoutController.cpp
 endif
-
-libfollybasesse42_la_LDFLAGS = $(AM_LDFLAGS) -version-info $(LT_VERSION)
 
 libfollybase_la_LIBADD = libfollybasesse42.la
 libfollybase_la_LDFLAGS = $(AM_LDFLAGS) -version-info $(LT_VERSION)
