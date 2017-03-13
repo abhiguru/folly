@@ -588,9 +588,6 @@ libfolly_la_SOURCES += \
 	fibers/TimeoutController.cpp
 endif
 
-libfollybase_la_LIBADD = libfollybasesse42.la
-libfollybase_la_LDFLAGS = $(AM_LDFLAGS) -version-info $(LT_VERSION)
-
 libfolly_la_LIBADD = libfollybase.la
 libfolly_la_LDFLAGS = $(AM_LDFLAGS) -version-info $(LT_VERSION) -lssl
 
